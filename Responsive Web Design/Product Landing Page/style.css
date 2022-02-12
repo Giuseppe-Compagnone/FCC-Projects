@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(230, 227, 227);
+    margin: 0 auto;
+    text-align: center;
+}
+
+#body {
+    background-color: rgb(175, 175, 175);
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+img {
+    width: 270px;
+    height: 90px;
+    float: left;
+    display: block;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(44, 44, 44);
+    border-bottom: 3px solid rgb(112, 112, 112);
+    box-shadow: 0 0 20px 0 black;
+    padding: 5px 0;
+    z-index: 100;
+}
+
+nav {
+    display: inline-block;
+    margin: auto 0;
+    width: 100%;
+}
+
+.nav-link {
+    font-size: 20px;
+    float: right;
+    text-decoration: none;
+    color: white;
+    height: auto;
+    margin-right: 100px;
+    display: block;
+}
+
+.nav-link:hover {
+    color: #316bff;
+}
+
+h1 {
+    padding: 50px 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+iframe {
+    box-shadow: 0 0 30px 0 black;
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+
+label {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+form{
+    margin-top:100px;
+}
+
+input {
+    width: 40%;
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: 2px solid black;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 0rem 1rem;
+}
+
+input:placeholder-shown {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+
+#submit {
+    width: 10%;
+    background-color: #316bff;
+    color: white;
+    border: none;
+    margin-bottom: 100px;
+    cursor:pointer;
+}
+
+#submit:hover{
+    background-color: #2299ff;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 100px;
+    width: 600px;
+}
+
+#feat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 29px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #316bff;
+    border: 2px solid #316bff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    margin:0 15px;
+}
+
+li {
+    width: 600px;
+    margin:50px 0;
+}
+
+p {
+    text-align: left;
+    font-weight: 400;
+    margin-left:76px;
+}
+
+hr{
+    background-color: #316bff;
+    border:none;
+    height: 3px;
+    border-radius: 5px;
+    width:80%;
+    margin:0 auto;
+}
+
+#container{
+    display: flex;
+    margin-bottom: 100px;
+}
+
+#container img{
+    display: flex;
+    align-items: center;
+    margin:auto 0 auto 50px;
+    width:400px;
+    height:400px;
+}
+
+#price{
+    display: flex;
+    justify-content: center;
+    margin:100px 0;
+}
+
+.card{
+    width:20%;
+    height:auto;
+    margin:0 40px;
+    display: block;
+    text-align: center;
+    background-color: rgb(175, 175, 175);
+    border-radius: 15px;
+    box-shadow: 0 0 30px 0 black;
+}
+
+.liter{
+    padding:15px 0;
+    background-color: #316bff;
+    border-radius: 15px 15px 0 0;
+}
+
+.price_text{
+    height:auto;
+    padding:100px 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin:0 auto;
+}
+
+.price_btn{
+    display: block;
+    height:20px;
+    padding:15px 0;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 0 0 15px 15px;
+}
+
+footer{
+    background-color: #102355;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding:0 0 30px 0;
+}
+
+footer li{
+    display: block;
+    margin:0 auto;
+}
+
+footer li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+footer ul{
+    margin:0;
+    display: flex;
+    width: 100%;
+}
+
+footer h1{
+    background-color: #0a1635;
+    color:white;
+    padding:15px 0;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+@media (max-width:700px){
+
+    #price{
+        display: block;
+    }
+
+    .card{
+        display: block;
+        box-shadow: 0 0 20px 0 black;
+        width:30%;
+        margin:0 auto;
+        margin-bottom:50px;
+    }
+
+}

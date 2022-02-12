@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="header">
+        <img src="https://lh3.google.com/u/0/d/1SoEJBo9xqZ7jAudZFcOPX2TBxTqhOn4a=w1366-h657-iv1" alt="logo" id="header-img">
+        <nav id="nav-bar">
+            <a href="#anchor_price" class="nav-link">Pricing</a>
+            <a href="#submit" class="nav-link">Features</a>
+            <a href="#video" class="nav-link">How it works</a>
+        </nav>
+    </header> 
+    <div id="body">   
+        <h1>Try our products</h1>
+        <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/SKm-HyYoxp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <hr>
+        <form id="form" action="mailto:https://www.freecodecamp.com/email-submit">
+            <label for="email">Sign up to our newsletter</label><br>
+            <input type="email" id="email" placeholder="example@gmail.com" name="email" required><br>
+            <input type="submit" id="submit" value="Subscribe"><br>
+        </form>
+        <hr>
+        <div id="container">
+            <ul id="features">
+                <li>
+                    <div id="feat">
+                        <i class="fas fa-heartbeat icon"></i>
+                        <h2>Health</h2>
+                    </div>
+                    <p>An air fryer isn’t only convenient to use but you can make a lot of healthy meals using it. You use less or no oil when cooking using this appliance while excess oil isn’t soaked up by your food. That means fewer calories and l fat! There are a lot of simple and healthy meals available online if you have no idea where to start.</p>
+                </li>
+                <hr>
+                <li>
+                    <div id="feat">
+                        <i class="far fa-clock icon"></i>
+                        <h2>Time</h2>
+                    </div>                
+                    <p>So you can take the time for a conventional oven and cut the time you air fry it. For example, if the standard recipe states to cook the food for 30 minutes, you can typically cut the time to 20 minutes. </p>
+                </li>
+                <hr>
+                <li>
+                    <div id="feat">
+                        <i class="fas fa-wind icon"></i>
+                        <h2>No more bad smells</h2>
+                    </div>
+                    <p>Some air fryers are built with an integrated air filter that eliminates those unwanted vapors and food odors from spreading around your house.
+                        No more smelling like your favorite fried foods, the air filter will diffuse that hot oil steam that floats and sticks.</p>
+                </li>
+            </ul>
+            <img src="https://lh3.google.com/u/0/d/1rRn6HZE7mdO-HgYEO7WjUZRGkDFdVSJs=w1366-h657-iv1" alt="air_fryer">
+        </div>
+        <span id="anchor_price"></span>
+        <hr>
+        <div id="price">
+            <div class="card">
+                <h1 class="liter">2L</h1>
+                <p class="price_text">The smaller</p>
+                <a href="#" class="price_btn">BUY</a>
+            </div>
+            <div class="card">
+                <h1 class="liter">5L</h1>
+                <p class="price_text">The medium</p>
+                <a href="#" class="price_btn">BUY</a>
+            </div>
+            <div class="card">
+                <h1 class="liter">10L</h1>
+                <p class="price_text">The bigger</p>
+                <a href="#" class="price_btn">BUY</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h1>Copyright 2021, AirFood</h1>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+
+
+
+<!-- 
+                                                                           
+          ________.__                                                      
+         /  _____/|__|__ __  ______ ____ ______ ______   ____              
+        /   \  ___|  |  |  \/  ___// __ \\____ \\____ \_/ __ \             
+        \    \_\  \  |  |  /\___ \\  ___/|  |_> >  |_> >  ___/             
+         \______  /__|____//____  >\___  >   __/|   __/ \___  >            
+                \/              \/     \/|__|   |__|        \/             
+_________                                                                  
+\_   ___ \  ____   _____ ___________     ____   ____   ____   ____   ____  
+/    \  \/ /  _ \ /     \\____ \__  \   / ___\ /    \ /  _ \ /    \_/ __ \ 
+\     \___(  <_> )  Y Y  \  |_> > __ \_/ /_/  >   |  (  <_> )   |  \  ___/ 
+ \______  /\____/|__|_|  /   __(____  /\___  /|___|  /\____/|___|  /\___  >
+        \/             \/|__|       \//_____/      \/            \/     \/ 
+
+
+         -->

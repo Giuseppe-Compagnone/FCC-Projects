@@ -1,0 +1,75 @@
+
+$btn-size: 4.5rem
+$btn-gap: .8rem
+$main: #131515
+$second: #339989
+$text: #fffafb
+$border: #7de2d1
+$btn: #2b2c28
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    color: $text
+    font-family: 'Supermercado One', cursive
+
+body
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 2rem
+
+    background-color: $main
+    
+
+#drum-machine
+    display: flex
+    align-items: center
+    justify-content: space-around 
+
+    width: 115%
+    height: 20rem
+    background-color: $second
+
+    border-radius: 1rem
+
+#btns
+    width: calc( ( #{$btn-size} + #{$btn-gap} ) * 3 )
+    height: calc( ( #{$btn-size} + #{$btn-gap} ) * 3 )
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-content: space-around
+    background-color: $border
+    border-radius: .5rem
+
+.drum-pad
+    height: $btn-size
+    width: $btn-size
+    border: none
+    border-radius: .3rem
+    background-color: $btn
+    cursor: pointer
+    &:hover
+        filter: brightness(1.5)
+    &:active
+        filter: brightness(.5)
+
+#right
+    width: calc( ( #{$btn-size} + #{$btn-gap} ) * 3 )
+    height: calc( ( #{$btn-size} + #{$btn-gap} ) * 3 )
+    display: flex
+    justify-content: center
+    align-items: center
+
+#display
+    background-color: $btn
+    border-radius: .5rem
+    padding: .5rem
+    width: 80%
+    display: flex
+    justify-content: center
+  

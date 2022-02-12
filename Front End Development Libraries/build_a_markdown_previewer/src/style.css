@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html *::-webkit-scrollbar {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border: 0.2rem solid #888888;
+  border-radius: 2rem;
+  background: #111;
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 2rem;
+  background: #888888;
+}
+
+html * {
+  scrollbar-face-color: #111;
+  scrollbar-track-color: #888888;
+}
+
+body {
+  background-color: #3f3f3f;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toolbar {
+  width: 100%;
+  background-color: #111;
+  border-bottom: 0.1rem solid #fff;
+  border-radius: 1rem 1rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+.toolbar * {
+  margin: 0 .5rem;
+}
+
+.toolbar h2 {
+  width: 100%;
+}
+
+.fa-expand-arrows-alt,
+.fa-compress-arrows-alt {
+  cursor: pointer;
+}
+
+#editor {
+  width: 100%;
+  min-height: 15rem;
+  background-color: #222;
+  border: none;
+  border-radius: 0 0 1rem 1rem;
+  resize: vertical;
+  color: #fff;
+}
+
+#editor:focus {
+  border: none !important;
+}
+
+#preview {
+  width: 100%;
+  background-color: #222;
+  border-radius: 0 0 1rem 1rem;
+  overflow-wrap: break-word;
+  padding: .5rem;
+}
+
+#preview * {
+  max-width: 90%;
+}
+
+#preview img {
+  display: block;
+  margin: 1rem auto;
+}
+
+#preview blockquote {
+  border-left: 0.2rem solid #5379f5;
+  color: #5379f5;
+  padding-left: .3rem;
+  margin-left: 1rem;
+}
+
+#preview code {
+  background-color: #3f3f3f;
+}
+
+#preview pre {
+  background-color: #3f3f3f;
+  border-radius: .5rem;
+  display: block;
+  padding: .5rem;
+}
+
+#preview table {
+  border-collapse: collapse;
+}
+
+#preview td, #preview th {
+  border: 0.2rem solid #111;
+  padding: .3rem;
+}
+
+#editor-block {
+  border-radius: 1rem;
+  background-color: #222;
+  width: 40%;
+  margin: 5rem 0 10rem 0;
+  -webkit-box-shadow: 0 0 0.5rem #fff;
+          box-shadow: 0 0 0.5rem #fff;
+}
+
+#preview-block {
+  width: 60%;
+  border-radius: 1rem;
+  background-color: #222;
+  -webkit-box-shadow: 0 0 0.5rem #fff;
+          box-shadow: 0 0 0.5rem #fff;
+}
+/*# sourceMappingURL=style.css.map */

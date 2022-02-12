@@ -1,0 +1,130 @@
+$main: #3f3f3f
+$text: #fff
+$toolbar: #111
+$second: #222
+$blockquote: #5379f5
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%))
+    &::-webkit-scrollbar 
+        width:  $size
+        height: $size
+    
+    &::-webkit-scrollbar-thumb 
+        border: .2rem solid $background-color
+        border-radius: 2rem
+        background: $foreground-color
+
+    &::-webkit-scrollbar-track 
+        border-radius: 2rem
+        background: $background-color
+       
+    & 
+        scrollbar-face-color: $foreground-color
+        scrollbar-track-color: $background-color
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html *
+    @include scrollbars($size: 1.4rem , $foreground-color: $toolbar)
+    
+
+body
+    background-color: $main
+    height: 100vh
+    width: 100%    
+    
+    color: $text
+
+.container-fluid
+    width: 100%
+    height: 100vh
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+.toolbar
+    width: 100%
+    background-color: $toolbar
+    border-bottom: .1rem solid $text
+    border-radius: 1rem 1rem 0 0
+
+    display: flex
+    align-items: center
+
+    font-size: 1.2rem 
+    *
+        margin: 0 .5rem
+    h2
+        width: 100%
+
+.fa-expand-arrows-alt,
+.fa-compress-arrows-alt
+    cursor: pointer
+
+#editor
+    width: 100%
+    min-height: 15rem
+    background-color: $second
+    border: none
+    border-radius: 0 0 1rem 1rem
+    resize: vertical 
+    color: $text
+
+    &:focus
+        border: none !important
+
+#preview
+    width: 100%
+    background-color: $second
+    border-radius: 0 0 1rem 1rem
+    overflow-wrap: break-word
+    padding: .5rem
+    *
+        max-width: 90%
+    img
+        display: block
+        margin: 1rem auto
+    blockquote
+        border-left: .2rem solid $blockquote
+        color: $blockquote
+        padding-left: .3rem
+        margin-left: 1rem
+    code
+        background-color: $main
+    pre 
+        background-color: $main
+        border-radius: .5rem
+        display: block
+        padding: .5rem
+    table
+        border-collapse: collapse
+    td,th
+        border: .2rem solid $toolbar
+        padding: .3rem
+
+#editor-block
+    border-radius: 1rem
+    background-color: $second
+    width: 40% 
+    margin: 5rem 0 10rem 0
+    box-shadow: 0 0 .5rem $text   
+
+#preview-block
+    width: 60%
+    border-radius: 1rem
+    background-color: $second
+    box-shadow: 0 0 .5rem $text
+
+
+    
+
+
+
+
+
+

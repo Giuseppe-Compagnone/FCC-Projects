@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fffafb;
+  font-family: 'Supermercado One', cursive;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  background-color: #131515;
+}
+
+#drum-machine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 115%;
+  height: 20rem;
+  background-color: #339989;
+  border-radius: 1rem;
+}
+
+#btns {
+  width: calc( ( 4.5rem + 0.8rem ) * 3);
+  height: calc( ( 4.5rem + 0.8rem ) * 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  background-color: #7de2d1;
+  border-radius: .5rem;
+}
+
+.drum-pad {
+  height: 4.5rem;
+  width: 4.5rem;
+  border: none;
+  border-radius: .3rem;
+  background-color: #2b2c28;
+  cursor: pointer;
+}
+
+.drum-pad:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+.drum-pad:active {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+#right {
+  width: calc( ( 4.5rem + 0.8rem ) * 3);
+  height: calc( ( 4.5rem + 0.8rem ) * 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#display {
+  background-color: #2b2c28;
+  border-radius: .5rem;
+  padding: .5rem;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */

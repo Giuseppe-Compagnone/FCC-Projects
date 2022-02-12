@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-image: linear-gradient(180deg, rgba(18, 16, 26, 0.9) 0%, rgba(18,16,26,0.7) 100%)
+    , url(https://www.aleaoffice.com/foto/news/5f1999897815e202007231607050.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;    
+}
+
+#title{
+    margin:20px 0 0 0;
+}
+
+
+div{
+    width:80%;
+    text-align: left;
+    margin: auto;    
+}
+
+div,ul{
+    background-color: rgb(2, 7, 85);
+    padding:20px;
+    border-radius: 10px;
+}
+
+input, select{
+    width:100%;
+    height: 30px;
+    border-radius: 5px;
+    margin:10px 0;
+}
+
+
+ul{
+    width:80%;
+    list-style-type: none;
+    margin:auto;
+    text-align: left;
+}
+
+li{
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+
+li input{
+    width:auto;
+    margin:0;
+    cursor: pointer;
+}
+
+li label{
+    margin-left: 5px;
+}
+
+select{
+    font-family: 'Montserrat',sans-serif;
+}
+
+.lt{
+    text-align: left;
+    width:80%;
+    margin:0 auto 10px auto;
+    display:block;
+}
+
+textarea{
+    width: 80%;
+    margin:auto;
+    margin-top: -10px;
+    resize: none;
+}
+
+#submit{
+    width:200px;
+    margin-top: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(2, 7, 85) ;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat',sans-serif;
+    border:none;
+    cursor: pointer;
+}
+
+textarea:placeholder-shown ,input:placeholder-shown{
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+#description{
+    margin-bottom: 30px;
+}
+
+#comlb{
+    margin-top: 100px;
+}
+
+#genderlb{
+    margin-top:10px;
+}
+
+form{
+    background-color: rgba(49, 107, 255, 0.6);
+    width: 50%;
+    margin:auto;
+    padding: 40px 0;
+    border-radius: 30px;
+}
+
+#lenglb{
+    margin-bottom: 15px;
+}
