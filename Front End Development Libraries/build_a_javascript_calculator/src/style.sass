@@ -1,0 +1,103 @@
+$back: #7768AE
+$number: #f1ca2a
+$display: #b581b1f5
+$calculator: #3BB273
+$equals: #2fa8f8
+$clear: #E15554
+$operator: #99df29
+
+$btn-size: 3.5rem
+$btn-gap: .5rem
+
+$btn-ids: zero, one, two, three, four, five, six, seven, eight, nine, decimal, add, subtract, divide, multiply, clear, equals
+
+@import url(//db.onlinewebfonts.com/c/7c6e146fe91c1b2633316a6aee97a9af?family=Digital-7)
+
+@each $btn in $btn-ids 
+  ##{$btn} 
+    grid-area: $btn
+  
+
+
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $back
+
+#calculator
+    background-color: $calculator
+    padding: 1rem
+    border-radius: .3rem
+
+#display
+    padding: 0
+    background-color: $display
+    height: $btn-size
+    font-family: Digital-7,Arial, Helvetica, sans-serif
+    margin-bottom: 1.5rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border-radius: .4rem
+    p
+        width: 100%
+        margin: 0
+        padding: .1rem .3rem
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    #result
+        height: 65%
+        font-size: 2rem
+    #operation
+        height: 35%
+        font-size: 1rem 
+        font-weight: bold
+
+#btns
+    padding: 0
+    display: grid
+    column-gap: $btn-gap
+    row-gap: $btn-gap
+    width: $btn-size
+    height: $btn-size
+    grid-template-areas: "clear clear divide multiply" "seven eight nine subtract" "four five six add" "one two three equals" "zero zero decimal equals"
+
+    width: calc( ( #{$btn-size} * 4 ) + ( #{$btn-gap} * 3 ) )
+    height: calc( ( #{$btn-size} * 5 ) + ( #{$btn-gap} * 4 ) )
+
+.btn
+    width: $btn-size
+    height: $btn-size
+    font-weight: bold
+
+#clear , #zero
+    width: calc( ( #{$btn-size} * 2 ) + #{$btn-gap} )
+
+#equals
+    background-color: $equals
+    height: calc( ( #{$btn-size} * 2 ) + #{$btn-gap} )
+    
+.clear
+    background-color: $clear
+
+.number
+    background-color: $number
+
+.operator
+    background-color: $operator
+
+    
+
+    
+
+
+

@@ -1,0 +1,219 @@
+@import url(//db.onlinewebfonts.com/c/7c6e146fe91c1b2633316a6aee97a9af?family=Digital-7);
+#zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: zero;
+}
+
+#one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+#two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+#three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+#four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+#five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+#six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+#seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+#eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+#nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+#decimal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: decimal;
+}
+
+#add {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: add;
+}
+
+#subtract {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: subtract;
+}
+
+#divide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: divide;
+}
+
+#multiply {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: multiply;
+}
+
+#clear {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: clear;
+}
+
+#equals {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: equals;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #7768AE;
+}
+
+#calculator {
+  background-color: #3BB273;
+  padding: 1rem;
+  border-radius: .3rem;
+}
+
+#display {
+  padding: 0;
+  background-color: #b581b1f5;
+  height: 3.5rem;
+  font-family: Digital-7,Arial, Helvetica, sans-serif;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: .4rem;
+}
+
+#display p {
+  width: 100%;
+  margin: 0;
+  padding: .1rem .3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#display #result {
+  height: 65%;
+  font-size: 2rem;
+}
+
+#display #operation {
+  height: 35%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#btns {
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+      grid-template-areas: "clear clear divide multiply" "seven eight nine subtract" "four five six add" "one two three equals" "zero zero decimal equals";
+  width: calc( ( 3.5rem * 4 ) + ( 0.5rem * 3 ));
+  height: calc( ( 3.5rem * 5 ) + ( 0.5rem * 4 ));
+}
+
+.btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-weight: bold;
+}
+
+#clear, #zero {
+  width: calc( ( 3.5rem * 2 ) + 0.5rem);
+}
+
+#equals {
+  background-color: #2fa8f8;
+  height: calc( ( 3.5rem * 2 ) + 0.5rem);
+}
+
+.clear {
+  background-color: #E15554;
+}
+
+.number {
+  background-color: #f1ca2a;
+}
+
+.operator {
+  background-color: #99df29;
+}
+/*# sourceMappingURL=style.css.map */
