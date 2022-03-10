@@ -9,39 +9,91 @@ class Btns extends React.Component {
     this.handleClear = this.handleClear.bind(this);
     this.handleNumber = this.handleNumber.bind(this);
     this.handleOperator = this.handleOperator.bind(this);
-    this.handleEqual= this.handleEqual.bind(this);
+    this.handleEqual = this.handleEqual.bind(this);
   }
 
+  
+
   handleClear(val) {
-    this.set({ ...this.state, small: "", big: "0",equal: false});
+    this.set({ ...this.state, small: "", big: "0", equal: false });
   }
 
   handleNumber(val) {
-    if(this.state.big==="+" || this.state.big==="-" || this.state.big==="*" || this.state.big==="/"){
-      this.set({...this.state, big: val,small: this.state.small+val, equal: false})
-    } else if(this.state.big==0){
-      this.set({...this.state, big: val,small: this.state.small+val, equal: false})
+    if (
+      this.state.big === "+" ||
+      this.state.big === "-" ||
+      this.state.big === "*" ||
+      this.state.big === "/"
+    ) {
+      this.set({
+        ...this.state,
+        big: val,
+        small: this.state.small + val,
+        equal: false,
+      });
+    } else if (this.state.big == 0) {
+      this.set({
+        ...this.state,
+        big: val,
+        small: this.state.small + val,
+        equal: false,
+      });
     } else {
-      if(val==="." && this.state.big.includes("."))return;
-      this.set({ ...this.state, big: this.state.big+val,small: this.state.small+val, equal: false});
-    };
+      if (val === "." && this.state.big.includes(".")) return;
+      this.set({
+        ...this.state,
+        big: this.state.big + val,
+        small: this.state.small + val,
+        equal: false,
+      });
+    }
   }
 
   handleOperator(val) {
-    if(this.state.big==="+" || this.state.big==="-" || this.state.big==="*" || this.state.big==="/"){
-      this.set({...this.state,small:this.state.small.replace(this.state.big,val),big:val});
-    }else{      
+    if (
+      this.state.big === "+" ||
+      this.state.big === "-" ||
+      this.state.big === "*" ||
+      this.state.big === "/"
+    ) {
+      console.log(this.state.small);
+      let regex = /^.*[\+\*\-\/]{2}/g;
+      if (regex.test(this.state.small)) {
+        this.set({
+          ...this.state,
+          small: this.state.small.slice(0, -2) + val,
+          big: val,
+        });
+      } else {
+        if (val !== "-") {
+          this.set({
+            ...this.state,
+            small: this.state.small.slice(0, -1) + val,
+            big: val,
+          });
+        } else {
+          this.set({ ...this.state, small: this.state.small + val, big: val });
+        }
+      }
+    } else if (this.state.equal === true) {
       this.set({
         ...this.state,
-        small: (this.state.small + val),
+        small: this.state.big + val,
+        big: val,
+        equal: false,
+      });
+    } else {
+      this.set({
+        ...this.state,
+        small: this.state.small + val,
         big: val,
       });
-    };
+    }
   }
 
-  handleEqual(val){
-    if(this.state.equal===true)return;
-    this.set({big:eval(this.state.small),small:val,equal:true});
+  handleEqual(val) {
+    if (this.state.equal === true) return;
+    this.set({ big: eval(this.state.small), small: val, equal: true });
   }
 
   list = [
