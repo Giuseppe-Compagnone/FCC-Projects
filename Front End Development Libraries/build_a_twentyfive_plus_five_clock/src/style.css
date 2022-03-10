@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #293241;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #E0FBFC;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#timer, .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .2rem;
+}
+
+#timer *, .wrapper * {
+  text-align: center;
+}
+
+.wrapper {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 1.5rem;
+  padding: 2rem;
+  background: #EE6C4D;
+  -webkit-box-shadow: 0 0 0.4rem 0.1rem #455761;
+          box-shadow: 0 0 0.4rem 0.1rem #455761;
+}
+
+i {
+  padding-top: .25rem;
+  border-radius: .2rem;
+  color: #3D5A80;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border: #3D5A80 0.2rem solid;
+  line-height: 1rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+i:hover {
+  -webkit-transform: translateY(-0.2rem) scale(1.1);
+          transform: translateY(-0.2rem) scale(1.1);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+.under, #controls {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+p {
+  margin-top: .7rem;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */
