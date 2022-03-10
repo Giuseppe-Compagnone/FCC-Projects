@@ -6,7 +6,7 @@ import { React,useState } from "react";
 
 function App() {
 
-  const [display, setDisplay] = useState({big:"0",small:"",exp:[],curr:""});
+  const [display, setDisplay] = useState({big:"0",small:"",equal: false});
 
 
   return (

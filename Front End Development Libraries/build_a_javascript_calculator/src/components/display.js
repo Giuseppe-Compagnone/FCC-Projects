@@ -7,9 +7,9 @@ class Display extends React.Component{
 
     render(){
         return(
-            <div id="display" className="container-fluid">
+            <div id="disp" className="container-fluid">
                 <p id="operation">{this.props.state.small}</p>
-                <p id="result">{this.props.state.big}</p>
+                <p id="display">{this.props.state.big}</p>
             </div>
         );
     }

@@ -9,32 +9,39 @@ class Btns extends React.Component {
     this.handleClear = this.handleClear.bind(this);
     this.handleNumber = this.handleNumber.bind(this);
     this.handleOperator = this.handleOperator.bind(this);
+    this.handleEqual= this.handleEqual.bind(this);
   }
 
   handleClear(val) {
-    this.set({ ...this.state, small: "", big: "0", exp: [], cur: "" });
+    this.set({ ...this.state, small: "", big: "0",equal: false});
   }
 
   handleNumber(val) {
-    console.log("New big:",  this.state.big+val)
     if(this.state.big==="+" || this.state.big==="-" || this.state.big==="*" || this.state.big==="/"){
-      this.set({...this.state, big: val,small: this.state.exp})
+      this.set({...this.state, big: val,small: this.state.small+val, equal: false})
     } else if(this.state.big==0){
-      this.set({...this.state, big: val,small: this.state.exp})
+      this.set({...this.state, big: val,small: this.state.small+val, equal: false})
     } else {
-      this.set({ ...this.state, big: this.state.big+val, cur: val });
-    }
-    console.log(this.state.exp)
+      if(val==="." && this.state.big.includes("."))return;
+      this.set({ ...this.state, big: this.state.big+val,small: this.state.small+val, equal: false});
+    };
   }
 
   handleOperator(val) {
-    this.set({
-      ...this.state,
-      small: (this.state.small += this.state.big),
-      big: val,
-      exp: this.state.exp.push(this.state.big),
-      cur: val,
-    });
+    if(this.state.big==="+" || this.state.big==="-" || this.state.big==="*" || this.state.big==="/"){
+      this.set({...this.state,small:this.state.small.replace(this.state.big,val),big:val});
+    }else{      
+      this.set({
+        ...this.state,
+        small: (this.state.small + val),
+        big: val,
+      });
+    };
+  }
+
+  handleEqual(val){
+    if(this.state.equal===true)return;
+    this.set({big:eval(this.state.small),small:val,equal:true});
   }
 
   list = [
@@ -138,7 +145,7 @@ class Btns extends React.Component {
       id: "equals",
       value: "=",
       type: "equals",
-      click: this.handleOperator,
+      click: this.handleEqual,
     },
   ];
 

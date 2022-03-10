@@ -131,7 +131,7 @@ body {
   border-radius: .3rem;
 }
 
-#display {
+#disp {
   padding: 0;
   background-color: #b581b1f5;
   height: 3.5rem;
@@ -150,7 +150,7 @@ body {
   border-radius: .4rem;
 }
 
-#display p {
+#disp p {
   width: 100%;
   margin: 0;
   padding: .1rem .3rem;
@@ -165,12 +165,12 @@ body {
           align-items: center;
 }
 
-#display #result {
+#disp #display {
   height: 65%;
   font-size: 2rem;
 }
 
-#display #operation {
+#disp #operation {
   height: 35%;
   font-size: 1rem;
   font-weight: bold;
