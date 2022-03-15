@@ -59,7 +59,8 @@ body {
 }
 
 i {
-  padding-top: .25rem;
+  padding-top: .29rem;
+  padding-right: .1rem;
   border-radius: .2rem;
   color: #3D5A80;
   width: 2rem;

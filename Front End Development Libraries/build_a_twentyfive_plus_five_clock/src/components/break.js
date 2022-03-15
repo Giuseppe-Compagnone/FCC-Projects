@@ -3,12 +3,12 @@ import React from "react";
 function Break(props){
 
     const handleDecrement = () =>{
-        if(props.state.break<=1)return;
+        if(props.state.break<=1 || props.state.play===true)return;
         props.set({...props.state,break:props.state.break-1});
     }
 
     const handleIncrement = () =>{
-        if(props.state.break>=60)return;
+        if(props.state.break>=60 || props.state.play===true)return;
         props.set({...props.state,break:props.state.break+1});
     }
 

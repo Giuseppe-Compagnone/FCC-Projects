@@ -6,7 +6,7 @@ import {useState} from "react";
 
 function App() {
 
-  const [timer, setTimer] = useState({break:5,session:25,timerText:"Session",play:false});
+  const [timer, setTimer] = useState({break:5,session:25,timerText:"Session",play:false,min:25,sec:0});
 
   return (
     <>

@@ -3,13 +3,13 @@ import React from "react";
 function Session(props){
 
     const handleDecrement = () =>{
-        if(props.state.session<=1)return;
-        props.set({...props.state,session:props.state.session-1});
+        if(props.state.session<=1 || props.state.play===true)return;
+        props.set({...props.state,session:props.state.session-1,min:props.state.session-1});
     }
 
     const handleIncrement = () =>{
-        if(props.state.session>=60)return;
-        props.set({...props.state,session:props.state.session+1});
+        if(props.state.session>=60 || props.state.play===true)return;
+        props.set({...props.state,session:props.state.session+1,min:props.state.session+1});
     }
 
     return(
