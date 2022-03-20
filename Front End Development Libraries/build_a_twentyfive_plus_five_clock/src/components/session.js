@@ -15,7 +15,7 @@ function Session(props){
     return(
         <>
         <div className="wrapper">
-            <h2 id="session-label">Session Lenght</h2>
+            <h2 id="session-label">Session Length</h2>
             <div className="under">
                 <i id="session-increment" className="fa-solid fa-plus" onClick={handleIncrement}></i>
                 <p id="session-lenght">{props.state.session}</p>

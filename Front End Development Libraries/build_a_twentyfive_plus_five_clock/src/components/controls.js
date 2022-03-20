@@ -1,53 +1,59 @@
 import React from "react";
 
 function Controls(props) {
+
+  let interval;
+  let hold = false;
+
   const handleReset = () => {
-    props.set({
-      ...props.state,
+    if(props.state.play){
+      clearInterval(interval);
+    }    
+    return props.set(s =>({
+      ...s,
       break: 5,
       session: 25,
       timerText: "Session",
+      min:25,
+      sec:0,
       play: false,
-    });
-    clearInterval(interval);
-    console.log("pulvi");
+    }));
   };
-
-  let interval;
 
   const play = () => {
     console.log("play");
-    props.set({ ...props.state, play: true });
+    let min = props.state.min;
+    let sec = props.state.sec;
+
+
     interval = setInterval(() => {
-      console.log("Acchiappa", props.state);
-      if (props.state.min <= 0 && props.state.sec <= 0) {
-        console.log("C1");
+      if (min <= 0 && sec <= 0) {
         pause();
       }
-      if (props.state.sec <= 0) {
-        console.log("C2");
-        props.set(s => ({
-          ...s,
-          min: s.min - 1,
-          sec: 59,
-          play: true,
-        }));
+      else if (sec <= 0) {
+        min -= 1;
+        sec = 59;
       } else {
-        console.log("C3");
-        props.set({ ...props.state, sec: props.state.sec - 1, play: true });
+        sec -=1;
+      }
+      props.set(s => ({...s,min:min,sec:sec,play:hold}));
+      if(!props.state.play){
+        clearInterval(interval); 
       }
     }, 1000);
   };
 
   const pause = () => {
-    console.log("pause");
-    props.set({ ...props.state, play: false });
-    clearInterval(interval);
+    console.log("pause");    
+    hold=false;
+    return props.set(s => ({...s,play:hold}))
   };
 
   const handlePlayPause = () => {
-    console.log(props.state);
-    if (!props.state.play) {
+
+    hold = !hold;
+
+    if (hold) {
       play();
     } else {
       pause();

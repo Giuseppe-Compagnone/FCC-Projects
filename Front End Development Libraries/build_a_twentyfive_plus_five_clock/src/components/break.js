@@ -15,7 +15,7 @@ function Break(props){
     return(
         <>
         <div className="wrapper">
-            <h2 id="break-label">Break Lenght</h2>
+            <h2 id="break-label">Break Length</h2>
             <div className="under">
                 <i id="break-increment" className="fa-solid fa-plus" onClick={handleIncrement}></i>
                 <p id="break-lenght">{props.state.break}</p>
